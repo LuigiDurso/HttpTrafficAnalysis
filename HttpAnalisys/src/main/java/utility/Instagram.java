@@ -20,7 +20,9 @@ public class Instagram
 		formFieled.get(1).sendKeys(password);
 		WebElement accessButton = driver.findElement(By.xpath("//button[@class='_qv64e _gexxb _4tgw8 _njrw0']"));
 		accessButton.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 	}
 	
 	public static void searchPersonAndPhotoLike(WebDriver driver,  String profileName) throws InterruptedException

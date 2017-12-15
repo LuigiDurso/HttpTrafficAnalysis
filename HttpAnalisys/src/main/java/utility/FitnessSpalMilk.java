@@ -22,23 +22,23 @@ public class FitnessSpalMilk
 		buttonFBLogin.click();
 		Thread.sleep(3000);
 		
-		String parentWindowHandler = driver.getWindowHandle(); // Manteniamo la finestra padre
-		String subWindowHandler = null;
-
-		Set<String> handles = driver.getWindowHandles(); // otteniamo tutte le finestre
-		Iterator<String> iterator = handles.iterator();
-		while (iterator.hasNext())
-		{
-		    subWindowHandler = iterator.next();
-		}
-		driver.switchTo().window(subWindowHandler); // switch nel popup
-
-		// Ora siamo nel popup
-		Facebook.FacebookAccess(driver, nomeUtente, pw);
-		Thread.sleep(3000);
-
-		driver.switchTo().window(parentWindowHandler);  // switch nella finestra padre
-		Thread.sleep(6000);
+//		String parentWindowHandler = driver.getWindowHandle(); // Manteniamo la finestra padre
+//		String subWindowHandler = null;
+//
+//		Set<String> handles = driver.getWindowHandles(); // otteniamo tutte le finestre
+//		Iterator<String> iterator = handles.iterator();
+//		while (iterator.hasNext())
+//		{
+//		    subWindowHandler = iterator.next();
+//		}
+//		driver.switchTo().window(subWindowHandler); // switch nel popup
+//
+//		// Ora siamo nel popup
+//		Facebook.FacebookAccess(driver, nomeUtente, pw);
+//		Thread.sleep(3000);
+//
+//		driver.switchTo().window(parentWindowHandler);  // switch nella finestra padre
+//		Thread.sleep(6000);
 	}
 	
 	/**

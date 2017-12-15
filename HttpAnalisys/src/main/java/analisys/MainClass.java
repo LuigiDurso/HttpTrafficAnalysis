@@ -1,6 +1,7 @@
 package analisys;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import utility.EpicWebDriver;
 import utility.Facebook;
@@ -15,22 +16,20 @@ public class MainClass {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		String chromeWebDriverPath = "C:\\Users\\johnn\\Librerie\\chromedriver.exe";
-		String epicBrowserPath = "C:\\Users\\johnn\\AppData\\Local\\Epic Privacy Browser\\Application\\epic.exe";
+		String chromeWebDriverPath = "C:\\Users\\Durso\\Downloads\\chromedriver_win32\\chromedriver.exe";
+		String epicBrowserPath = "C:\\Users\\Durso\\AppData\\Local\\Epic Privacy Browser\\Application\\epic.exe";
+		String chromeBrowserPath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
 		
-		WebDriver driver = EpicWebDriver.getEpicWebDriver(chromeWebDriverPath, epicBrowserPath);
-		//ricerca su yahoo answer
-		GoogleSearch.selectFirstElementOnGoogle(driver, "yahoo answer");
-		YahooSearch.selectFirstElementOnAnswer(driver, "movimento 5 stelle");
-		Thread.sleep(3000);
-		//accesso a Facebook
-		GoogleSearch.selectFirstElementOnGoogle(driver, "Facebook");
-		Facebook.FacebookAccess(driver, "luciafasolino25121994@gmail.com", "25121994");
-		Thread.sleep(3000);
+		WebDriver driver = EpicWebDriver.getEpicWebDriver(chromeWebDriverPath, chromeBrowserPath);
+		
 		//accesso a instagram e ricerca
 		GoogleSearch.selectFirstElementOnGoogle(driver, "Instagram");
 		Instagram.InstagamAccess(driver, "luciafasolino4592", "25121994");
 		Instagram.searchPersonAndPhotoLike(driver, "vincenzofalconedelicious");
+		Thread.sleep(3000);
+		//accesso a Facebook
+		GoogleSearch.selectFirstElementOnGoogle(driver, "Facebook");
+		Facebook.FacebookAccess(driver, "luciafasolino25121994@gmail.com", "25121994");
 		Thread.sleep(3000);
 		//ricerca su patreon e condivisione
 		GoogleSearch.selectFirstElementOnGoogle(driver, "patreon");
@@ -40,6 +39,10 @@ public class MainClass {
 		GoogleSearch.selectFirstElementOnGoogle(driver, "my fitness spall");
 		FitnessSpalMilk.loginByFB(driver,"luciafasolino25121994@gmail.com", "25121994");
 		FitnessSpalMilk.addMilk(driver);
+		Thread.sleep(3000);
+		//ricerca su yahoo answer
+		GoogleSearch.selectFirstElementOnGoogle(driver, "yahoo answer");
+		YahooSearch.selectFirstElementOnAnswer(driver, "movimento 5 stelle");
 		Thread.sleep(3000);
 		//ricerca su google movimento 5 stelle
 		GoogleSearch.selectFirstElementOnGoogle(driver, "Movimento 5 stelle");

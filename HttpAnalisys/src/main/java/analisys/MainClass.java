@@ -38,7 +38,6 @@ public class MainClass {
 		//aggiunta latte come colazione in myFitnessSpall
 		GoogleSearch.selectFirstElementOnGoogle(driver, "my fitness spall");
 		FitnessSpalMilk.loginByFB(driver,"luciafasolino25121994@gmail.com", "25121994");
-		Thread.sleep(6000);
 		FitnessSpalMilk.addMilk(driver);
 		Thread.sleep(3000);
 		//ricerca su yahoo answer

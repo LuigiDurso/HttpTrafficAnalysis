@@ -48,13 +48,15 @@ public class FitnessSpalMilk
 	 */
 	public static void addMilk(WebDriver driver) throws InterruptedException
 	{
-		//click su aggiungi alimento 
-		WebElement aggiungiAlimentoButton = driver.findElement(By.xpath("//*[@id=\"ember1732\"]"));
+		//click su aggiungi alimento
+		Thread.sleep(3000);
+		WebElement aggiungiAlimentoButton = driver.findElement(By.xpath("//*[@class=\"gray button ember-view\"][2]"));
+		System.out.println(aggiungiAlimentoButton);
 		aggiungiAlimentoButton.click();
 		Thread.sleep(3000);
 		//click su aggiungi alimento prima colazione 
-		aggiungiAlimentoButton = driver.findElement(By.xpath("//*[@id=\"diary-table\"]/tbody/tr[2]/td[1]/a"));
-		aggiungiAlimentoButton.click();
+		WebElement accediDiario = driver.findElement(By.xpath("//*[@id=\"diary-table\"]/tbody/tr[2]/td[1]/a"));
+		accediDiario.click();
 		Thread.sleep(3000);
 		//entrare in frequente
 		aggiungiAlimentoButton = driver.findElement(By.xpath("//*[@id=\"frequent_tab\"]/a"));

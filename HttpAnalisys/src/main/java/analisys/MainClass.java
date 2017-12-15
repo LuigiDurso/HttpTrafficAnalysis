@@ -15,8 +15,8 @@ public class MainClass {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		String chromeWebDriverPath = "C:\\Users\\Durso\\Downloads\\chromedriver_win32\\chromedriver.exe";
-		String epicBrowserPath = "C:\\Users\\Durso\\AppData\\Local\\Epic Privacy Browser\\Application\\epic.exe";
+		String chromeWebDriverPath = "C:\\Users\\johnn\\Librerie\\chromedriver.exe";
+		String epicBrowserPath = "C:\\Users\\johnn\\AppData\\Local\\Epic Privacy Browser\\Application\\epic.exe";
 		
 		WebDriver driver = EpicWebDriver.getEpicWebDriver(chromeWebDriverPath, epicBrowserPath);
 		//ricerca su yahoo answer
